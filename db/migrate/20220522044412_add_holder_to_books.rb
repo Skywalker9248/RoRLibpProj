@@ -1,0 +1,5 @@
+class AddHolderToBooks < ActiveRecord::Migration[7.0]
+  def change
+    add_column :books, :holder, :string
+  end
+end

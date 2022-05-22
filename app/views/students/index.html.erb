@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Students</h1>
+
+<div style="margin-left: 10px;margin-top: 10px;">
+  <button type="button" class="btn btn-dark">
+  <%= link_to "New student", new_student_path %></button>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4" id="student" style="margin:1vw">
+  <% @students.each do |student| %>
+    <div class="card text-white bg-dark " style="width: 250px; border-radius: 25px ;margin-left: 10px;margin-top: 10px;padding:15px;">
+     <%= render student %>
+      <p>
+      <button>
+        <%= link_to "MORE", student %>
+        </button>
+      </p>
+    </div>  
+  <% end %>
+  
+</div>

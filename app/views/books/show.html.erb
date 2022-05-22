@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @book %>
+
+<div>
+  <button type="button" class="btn btn-outline-secondary"><%= link_to "Edit this book", edit_book_path(@book) %></button>
+  <button type="button" class="btn btn-outline-secondary"><%= link_to "Back to books", books_path %></button>
+  <%= button_to "Delete this book", @book, method: :delete%>
+  <a class="btn btn-outline-secondary" href="/books/:book_id/borrow/new">Assign to Student</a>
+</div>
